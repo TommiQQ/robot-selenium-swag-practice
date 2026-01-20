@@ -37,6 +37,9 @@ Go To Menu Item
     Click Button    ${BURGER_MENU_BTN}
     Click Link    ${menu_item}
 
+Close Menu
+    Click Button    ${BURGER_CROSS_BTN}
+
 Verify Sort Options
     Click Element    ${SORT_DROPDOWN}
     Capture Page Screenshot    sort_options.png
@@ -68,6 +71,11 @@ Clear Shopping Cart If Not Empty
     ELSE
         Log    Shopping cart is already empty. ltem count: ${count}
     END
+
+Verify Product In Cart
+    [Arguments]    ${product_number}
+    ${product_name}=    Set Variable    ${PRODUCT_NAMES}[${product_number}]
+    Page Should Contain    ${product_name}
 
 Clear Shopping Cart
     # Get count using Get Element Count

@@ -21,4 +21,13 @@ ${CART_PAGE_TITLE}      Your Cart
 ${CART_REMOVE_BTN}      css:button[data-test^="remove-"]
 
 # Product buttons (dynamic)
-${ADD_TO_CART_BTN}      id:add-to-cart- 
+${ADD_TO_CART_BTN}      id:add-to-cart-
+${CHECKOUT_BTN}    id:checkout
+${CONTINUE_BTN}    id:continue
+${FINISH_BTN}    id:finish
+${BACK_HOME_BTN}    id:back-to-products
+${CHECKOUT_PAGE_TITLE}    Checkout: Your Information
+${CHECKOUT_OVERVIEW_TITLE}    Checkout: Overview
+${CHECKOUT_FIRST_NAME_FIELD}    id:first-name
+${CHECKOUT_LAST_NAME_FIELD}    id:last-name
+${CHECKOUT_ZIP_FIELD}    id:postal-code
