@@ -37,9 +37,6 @@ Go To Menu Item
     Click Button    ${BURGER_MENU_BTN}
     Click Link    ${menu_item}
 
-Close Menu
-    Click Button    ${BURGER_CROSS_BTN}
-
 Verify Sort Options
     Click Element    ${SORT_DROPDOWN}
     Capture Page Screenshot    sort_options.png
