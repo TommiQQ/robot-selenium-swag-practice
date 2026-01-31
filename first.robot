@@ -4,10 +4,12 @@ Resource    Resources/common.robot
 Resource    Resources/keywords.robot
 Resource    Resources/locators.robot
 
+Test Setup    Setup Chrome And Open URL    ${URL}
+Test Teardown    Close All Browsers
+
 *** Test Cases ***
 Login With All Users
-    Set Selenium Speed    0.5 seconds
-    Open Chrome    ${URL}
+    # Setup is done in Test Setup
     FOR    ${user}    IN    @{USERS}
         Login Correct    ${user}    ${PASSWORD}
         Page Should Contain    Products
@@ -15,8 +17,6 @@ Login With All Users
     END
 
 Login And Menu
-    Set Selenium Speed    0.5 seconds
-    Open Chrome    ${URL}
     #Login
     Login Incorrect    ${INVALID_USERNAME}    ${INVALID_PASSWORD}
     Login Correct    ${USERNAME}    ${PASSWORD}
@@ -34,8 +34,6 @@ Login And Menu
     Logout
 
 Login And Shopping
-    Set Selenium Speed    0.5 seconds
-    Open Chrome    ${URL}
     #Login
     Login Correct    ${USERNAME}    ${PASSWORD}
     #Add items to cart

@@ -3,6 +3,11 @@ Resource    common.robot
 Resource    locators.robot
 
 *** Keywords ***
+Setup Chrome And Open URL
+    [Arguments]    ${url}
+    Set Selenium Speed    0.5 seconds
+    Open Chrome    ${url}
+
 Open Chrome
     [Arguments]    ${url}
     Open Browser    ${url}    chrome    options=add_argument("--guest")
